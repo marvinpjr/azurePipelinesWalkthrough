@@ -14,15 +14,16 @@ steps:
   inputs:
     version: '$(DOTNET_SDK_VERSION)'
 
-- powershell: ./build.ps1
-  displayName: 'Execute Cake PowerShell Bootstrapper'
+- task: PowerShell@2
+  targetType: filePath
+  filePath: ./build.ps1  
 
 - task: CopyFiles@2
   displayName: 'Copy generated content'
   inputs: 
     SourceFolder: '$(Build.SourcesDirectory)/output'
     contents: '**\*' 
-    targetFolder: $(Build.ArtifactStagingDirectory)/outpout
+    targetFolder: $(Build.ArtifactStagingDirectory)/output
     cleanTargetFolder: true
 
 - task: CopyFiles@2
