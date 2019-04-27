@@ -15,8 +15,9 @@ steps:
     version: '$(DOTNET_SDK_VERSION)'
 
 - task: PowerShell@2
-  targetType: filePath
-  filePath: ./build.ps1  
+  inputs: 
+    targetType: filePath
+    filePath: ./build.ps1  
 
 - task: CopyFiles@2
   displayName: 'Copy generated content'
