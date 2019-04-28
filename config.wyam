@@ -2,7 +2,7 @@
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "host.com";
-Settings[BlogKeys.Title] = "My Blog";
+Settings[BlogKeys.Title] = "Testing Azure Devops Blog";
 Settings[BlogKeys.Description] = "Welcome!";
 
 // Add any pipeline customizations here
